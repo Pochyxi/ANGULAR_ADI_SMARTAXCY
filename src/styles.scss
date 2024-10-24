@@ -1,1 +1,41 @@
-/* You can add global styles to this file, and also import other style files */
+@import "smart-calendar";
+
+html,
+body {
+  height: 100vh;
+}
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif !important;
+  background-color: $bg-color;
+  box-sizing: border-box;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+  transition: opacity 0.5s ease-in;
+}
+
+/* Stili per la personalizzazione della barra di scorrimento per WebKit/Blink browsers */
+*::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: #e4326d;
+  border-radius: 10px;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Stili per Firefox */
+* {
+  scrollbar-width: auto; /* "auto", "thin", "none" */
+  scrollbar-color: #e4326d #f1f1f1; /* thumb and track */
+}

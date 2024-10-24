@@ -1,0 +1,240 @@
+$primary: #00c7db;
+$secondary: #e4326d;
+$bg-color: #00c9db0b;
+$text: #333333;
+
+//  GENERAL STYLES
+
+// TESTO PRINCIPALE
+.primary-message {
+  color: $primary !important;
+  font-weight: bold !important;
+}
+
+.secondary-message {
+  color: $secondary !important;
+  font-weight: bold !important;
+}
+
+//  PRIMARY BUTTON
+.primary-button {
+  color: $primary !important;
+  font-weight: bold;
+  background-color: white !important;
+  border: 2px solid $primary !important;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+// ABILITATO
+.primary-button:enabled {
+  background-color: white;
+}
+
+// DISABILITATO
+.primary-button:disabled {
+  opacity: 0.5;
+  background-color: $primary !important;
+  color: white !important;
+}
+
+// HOVER
+.primary-button:hover {
+  color: white !important;
+  transform: translate(0px, -2px);
+  background-color: $primary !important;
+}
+
+/////////////////////////////
+
+//  SECONDARY BUTTON
+.secondary-button {
+  color: $secondary !important;
+  font-weight: bold;
+  background-color: white !important;
+  border: 2px solid $secondary !important;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+}
+
+// ABILITATO
+.secondary-button:enabled {
+  background-color: white;
+}
+
+// DISABILITATO
+.secondary-button:disabled {
+  opacity: 0.5;
+  background-color: $secondary !important;
+  color: white !important;
+}
+
+// HOVER
+.secondary-button:hover {
+  color: white !important;
+  transform: translate(0px, -2px);
+  background-color: $secondary !important;
+}
+
+/////////////////////////////
+
+//  GREEN BUTTON
+.green-button {
+  color: #00db66 !important;
+  font-weight: bold;
+  background-color: white !important;
+  border: 2px solid #00db66 !important;
+  transition: all 0.2s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+
+  .icon {
+    width: 30px;
+    height: 30px;
+  }
+  //<img class="icon" src="./assets/icons/file-excel.svg"  alt="export"/>
+
+  &:enabled {
+    background-color: white;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: $primary !important;
+    color: white !important;
+  }
+
+  // HOVER
+  &:hover {
+    color: white !important;
+    transform: translate(0px, -2px);
+    background-color: #00af4e !important;
+  }
+}
+/////////////////////////////
+
+// FORM
+.form-label {
+  color: $primary;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+// INPUT
+.smart-input {
+  padding: 10px;
+  padding-left: 80px !important;
+  border-color: $primary;
+}
+
+// SVG
+.svg-container {
+  position: relative;
+  top: 40px;
+}
+
+.svg-container-right {
+  position: relative;
+  width: 30px;
+  top: 38px;
+  right: 20px;
+}
+
+.button-for-tooltip {
+  position: relative;
+  top: 40px;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  z-index: 1;
+}
+
+/////////////////////////////
+
+// RESET STILE SNACKBAR DI MATERIAL
+.mat-mdc-snack-bar-container .mdc-snackbar__surface {
+  --mdc-snackbar-container-color: transparent;
+  background-color: transparent !important;
+  color: transparent !important;
+  box-shadow: none !important;
+}
+
+// SMART SNACKBAR ALERT
+.smart-snackbar-alert {
+  background-color: #e4326d;
+  border-radius: 10px;
+}
+
+// SMART SNACKBAR SUCCESS
+.smart-snackbar-success {
+  background-color: #00c7db;
+  border-radius: 10px;
+}
+
+// TOOLTIP
+.tooltip {
+  //visibility: hidden;
+  width: 100px;
+  background-color: $primary;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.position-top {
+  position: absolute;
+  z-index: 9999999;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -50px;
+}
+
+.position-right {
+  width: 300px;
+  position: absolute;
+  z-index: 9999999;
+  bottom: 80%;
+  left: 50%;
+  margin-left: -150px;
+}
+
+.position-in-table {
+  width: 300px;
+  font-size: 0.8rem;
+  position: absolute;
+  z-index: 9999999;
+  bottom: -30%;
+  left: 50%;
+  margin-left: -215px;
+}
+
+button:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+// SEZIONE PRINCIPALE
+.principal-section {
+  min-height: 90vh;
+  margin-top: 20px;
+  border-left: #00c7db 2px solid;
+  background-image: linear-gradient(to bottom, white, whitesmoke);
+}
