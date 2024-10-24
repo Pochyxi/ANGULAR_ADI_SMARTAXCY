@@ -18,6 +18,7 @@ import { AxcyComponent } from '../../axcy/axcy.component';
 import { TooltipDirective } from '../../../directives/tooltip.directive';
 import { ResponsiveCardComponent } from '../../../components-template/responsive-card/responsive-card.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import {TranslationService} from "../../../services/translation.service";
 
 @Component({
   selector: 'app-login',
@@ -80,6 +81,7 @@ export class LoginComponent implements OnInit, OnDestroy {
     private responsive$: ResponsiveService,
     private axcy$: AxcyService,
     public translate$: TranslateService,
+    public translation$: TranslationService
   ) {
     this.loginForm = this.fb.group({
       usernameOrEmail: [''],

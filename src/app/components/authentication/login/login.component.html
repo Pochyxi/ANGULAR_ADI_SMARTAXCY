@@ -238,6 +238,14 @@
             <a [routerLink]="['/auth/recovery-password']">{{
               "LOGIN.FORGOT_PASSWORD_QUESTION" | translate
             }}</a>
+            <button
+              mat-raised-button
+              (mouseover)="loginButtonMouseOver()"
+              (focus)="loginButtonMouseOver()"
+              type="button"
+              class="primary-button mt-3 d-block w-50 m-auto"
+            >
+            </button>
           </div>
         </div>
 
