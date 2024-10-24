@@ -46,8 +46,8 @@ export class AnimateParticlesComponent implements AfterViewInit, OnDestroy{
   private adjustCanvasSize = (): void => {
     if (this.particleCanvas && this.particleCanvas.nativeElement) {
       const canvas = this.particleCanvas.nativeElement;
-      canvas.width = window.innerWidth - 10;
-      canvas.height = window.innerHeight - 10;
+      canvas.width = window.innerWidth - 50;
+      canvas.height = window.innerHeight - 50;
 
       if (this.animationFrameId) {
         cancelAnimationFrame(this.animationFrameId);

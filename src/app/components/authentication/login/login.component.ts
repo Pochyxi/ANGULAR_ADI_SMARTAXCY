@@ -16,11 +16,13 @@ import {JwtAuthResponseInterface} from "../../../models/jwt-auth-response-interf
 import {ResponsiveService} from "../../../services/responsive.service";
 import {AxcyComponent} from "../../axcy/axcy.component";
 import {TooltipDirective} from "../../../directives/tooltip.directive";
+import {ResponsiveCardComponent} from "../../../components-template/responsive-card/responsive-card.component";
+import {TranslateModule, TranslateService} from "@ngx-translate/core";
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, MaterialModule, AnimateParticlesComponent, AxcyComponent, ReactiveFormsModule, RouterLink, TooltipDirective],
+  imports: [CommonModule, MaterialModule, AnimateParticlesComponent, AxcyComponent, ReactiveFormsModule, RouterLink, TooltipDirective, ResponsiveCardComponent, TranslateModule],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
 })
@@ -67,6 +69,7 @@ export class LoginComponent implements OnInit, OnDestroy{
     private snack$: SnackbarService,
     private responsive$: ResponsiveService,
     private axcy$: AxcyService,
+    public translate$: TranslateService,
   ) {
     this.loginForm = this.fb.group({
       usernameOrEmail: [''],
