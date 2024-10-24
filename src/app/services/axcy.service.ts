@@ -1,13 +1,12 @@
 import { Injectable } from '@angular/core';
-import {Emotion} from "../models/Emotion";
-import {AxcySetup} from "../models/AxcySetup";
-import {BehaviorSubject} from "rxjs";
+import { Emotion } from '../models/Emotion';
+import { AxcySetup } from '../models/AxcySetup';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AxcyService {
-
   private axcyEmotionSubject = new BehaviorSubject<string>(
     './assets/icons/axcy_house/AXCY_WATCHER_BOTTOM.svg',
   );

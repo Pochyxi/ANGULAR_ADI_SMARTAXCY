@@ -1,15 +1,14 @@
 import { Injectable } from '@angular/core';
-import {PaginatedGeneric} from "../models/PaginatedGeneric";
-import {User} from "../models/User";
-import {HttpClient} from "@angular/common/http";
-import {BehaviorSubject} from "rxjs";
-import {environment} from "../../environments/environment";
+import { PaginatedGeneric } from '../models/PaginatedGeneric';
+import { User } from '../models/User';
+import { HttpClient } from '@angular/common/http';
+import { BehaviorSubject } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UserService {
-
   // URL APIs
   rootApiUrl = environment.ROOTAPIURL;
 
@@ -102,10 +101,10 @@ export class UserService {
     );
     return this.http.get<PaginatedGeneric<User>>(
       this.rootApiUrl +
-      this.usersByProjectNameApiUrl +
-      projectName +
-      '/all' +
-      paramString,
+        this.usersByProjectNameApiUrl +
+        projectName +
+        '/all' +
+        paramString,
     );
   }
 
@@ -125,11 +124,11 @@ export class UserService {
     );
     return this.http.get<PaginatedGeneric<User>>(
       this.rootApiUrl +
-      this.userByProjectNameApiUrl +
-      projectName +
-      '/email/' +
-      email +
-      paramString,
+        this.userByProjectNameApiUrl +
+        projectName +
+        '/email/' +
+        email +
+        paramString,
     );
   }
 

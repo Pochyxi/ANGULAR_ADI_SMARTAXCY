@@ -1,0 +1,9 @@
+<div
+  class="neumorphic-card border-blue mat-elevation-z4 p-2"
+  [class.col-11]="isMobile"
+  [class.col-6]="isTablet"
+  [class.col-4]="isDesktop || isDesktopLarge"
+  [class.col-3]="isDesktopExtraLarge"
+>
+  <ng-content></ng-content>
+</div>

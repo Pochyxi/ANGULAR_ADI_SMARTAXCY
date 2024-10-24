@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import {Employee} from "../models/Employee";
-import {environment} from "../../environments/environment";
-import {BehaviorSubject} from "rxjs";
-import {HttpClient} from "@angular/common/http";
+import { Employee } from '../models/Employee';
+import { environment } from '../../environments/environment';
+import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class EmployeeService {
-
   private rootapiurl = environment.ROOTAPIURL;
   private employeeapiurl = environment.EMPLOYEEAPIURL;
   private employeesapiurl = environment.EMPLOYEESAPIURL;

@@ -1,32 +1,42 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {CommonModule} from "@angular/common";
-import {MaterialModule} from "../../../material/material.module";
-import {AnimateParticlesComponent} from "../../../animations/animate-particles/animate-particles.component";
-import {Subject, takeUntil} from "rxjs";
-import {FormBuilder, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {User} from "../../../models/User";
-import {ResponsiveObject} from "../../../models/ResponsiveObject";
-import {AxcySetup} from "../../../models/AxcySetup";
-import {Router, RouterLink} from "@angular/router";
-import {UserService} from "../../../services/user.service";
-import {AuthenticationService} from "../../../services/authentication.service";
-import {SnackbarService} from "../../../services/snackbar.service";
-import {AxcyService} from "../../../services/axcy.service";
-import {JwtAuthResponseInterface} from "../../../models/jwt-auth-response-interface";
-import {ResponsiveService} from "../../../services/responsive.service";
-import {AxcyComponent} from "../../axcy/axcy.component";
-import {TooltipDirective} from "../../../directives/tooltip.directive";
-import {ResponsiveCardComponent} from "../../../components-template/responsive-card/responsive-card.component";
-import {TranslateModule, TranslateService} from "@ngx-translate/core";
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { MaterialModule } from '../../../material/material.module';
+import { AnimateParticlesComponent } from '../../../animations/animate-particles/animate-particles.component';
+import { Subject, takeUntil } from 'rxjs';
+import { FormBuilder, FormGroup, ReactiveFormsModule } from '@angular/forms';
+import { User } from '../../../models/User';
+import { ResponsiveObject } from '../../../models/ResponsiveObject';
+import { AxcySetup } from '../../../models/AxcySetup';
+import { Router, RouterLink } from '@angular/router';
+import { UserService } from '../../../services/user.service';
+import { AuthenticationService } from '../../../services/authentication.service';
+import { SnackbarService } from '../../../services/snackbar.service';
+import { AxcyService } from '../../../services/axcy.service';
+import { JwtAuthResponseInterface } from '../../../models/jwt-auth-response-interface';
+import { ResponsiveService } from '../../../services/responsive.service';
+import { AxcyComponent } from '../../axcy/axcy.component';
+import { TooltipDirective } from '../../../directives/tooltip.directive';
+import { ResponsiveCardComponent } from '../../../components-template/responsive-card/responsive-card.component';
+import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-login',
   standalone: true,
-  imports: [CommonModule, MaterialModule, AnimateParticlesComponent, AxcyComponent, ReactiveFormsModule, RouterLink, TooltipDirective, ResponsiveCardComponent, TranslateModule],
+  imports: [
+    CommonModule,
+    MaterialModule,
+    AnimateParticlesComponent,
+    AxcyComponent,
+    ReactiveFormsModule,
+    RouterLink,
+    TooltipDirective,
+    ResponsiveCardComponent,
+    TranslateModule,
+  ],
   templateUrl: './login.component.html',
-  styleUrl: './login.component.scss'
+  styleUrl: './login.component.scss',
 })
-export class LoginComponent implements OnInit, OnDestroy{
+export class LoginComponent implements OnInit, OnDestroy {
   // SUBJECT PER LA GESTIONE DELLA UNSUBSCRIBE
   private onDestroy$ = new Subject<void>();
 

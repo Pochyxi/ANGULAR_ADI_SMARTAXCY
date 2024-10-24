@@ -1,19 +1,18 @@
 import { Injectable } from '@angular/core';
-import {environment} from "../../environments/environment";
-import {BehaviorSubject} from "rxjs";
-import {HttpClient} from "@angular/common/http";
-import {Router} from "@angular/router";
-import {UserService} from "./user.service";
-import {EmployeeService} from "./employee.service";
-import {JwtAuthResponseInterface} from "../models/jwt-auth-response-interface";
-import {User} from "../models/User";
-import {Employee} from "../models/Employee";
+import { environment } from '../../environments/environment';
+import { BehaviorSubject } from 'rxjs';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { UserService } from './user.service';
+import { EmployeeService } from './employee.service';
+import { JwtAuthResponseInterface } from '../models/jwt-auth-response-interface';
+import { User } from '../models/User';
+import { Employee } from '../models/Employee';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthenticationService {
-
   // URL APIs
   private rootApiUrl = environment.ROOTAPIURL;
 

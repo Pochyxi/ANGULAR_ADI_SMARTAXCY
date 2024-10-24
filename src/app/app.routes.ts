@@ -4,9 +4,7 @@ export const routes: Routes = [
   {
     path: '',
     loadComponent: () =>
-      import('./components/home/home.component').then(
-        (m) => m.HomeComponent
-      ),
+      import('./components/home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'auth',
@@ -15,8 +13,15 @@ export const routes: Routes = [
         path: 'login',
         loadComponent: () =>
           import('./components/authentication/login/login.component').then(
-            (m) => m.LoginComponent
+            (m) => m.LoginComponent,
           ),
+      },
+      {
+        path: 'recovery-password',
+        loadComponent: () =>
+          import(
+            './components/auth/recovery-password/recovery-password.component'
+          ).then((m) => m.RecoveryPasswordComponent),
       },
     ],
   },

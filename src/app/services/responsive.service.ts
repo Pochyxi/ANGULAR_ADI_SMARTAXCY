@@ -1,12 +1,11 @@
 import { Injectable } from '@angular/core';
-import {BehaviorSubject} from "rxjs";
-import {ResponsiveObj} from "../models/ResponsiveObj";
+import { BehaviorSubject } from 'rxjs';
+import { ResponsiveObj } from '../models/ResponsiveObj';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ResponsiveService {
-
   // MOBILE
   private isMobile = new BehaviorSubject<boolean>(window.innerWidth < 768);
 

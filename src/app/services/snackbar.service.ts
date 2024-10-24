@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
-import {MatSnackBar} from "@angular/material/snack-bar";
-import {SnackbarComponent} from "../material/snackbar/snackbar.component";
-import {AxcySetup} from "../models/AxcySetup";
-import {AxcyService} from "./axcy.service";
+import { MatSnackBar } from '@angular/material/snack-bar';
+import { SnackbarComponent } from '../material/snackbar/snackbar.component';
+import { AxcySetup } from '../models/AxcySetup';
+import { AxcyService } from './axcy.service';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class SnackbarService {
-
   constructor(
     private snackbar$: MatSnackBar,
     private axcy$: AxcyService,

@@ -7,11 +7,8 @@
     id="login-form-container"
     class="row flex-column justify-content-center align-items-center p-0"
   >
-
-
-      <!-- AXY COMPONENT-->
-      <app-axcy [spawnPlace]="'login'" [classes]="['mt-3']">
-      </app-axcy>
+    <!-- AXY COMPONENT-->
+    <app-axcy [spawnPlace]="'login'" [classes]="['mt-3']"> </app-axcy>
 
     <!-- CONTENITORE COL DEL FORM -->
     <app-responsive-card
@@ -238,11 +235,9 @@
           <!-- CONTENITORE COL PASSWORD DIMENTICATA -->
           <div class="col-6 text-end">
             <!-- LINK PER LA PASSWORD DIMENTICATA -->
-            <a
-              id="forgot-password-button"
-              [routerLink]="['/auth/recovery-password']"
-            >{{ 'LOGIN.FORGOT_PASSWORD_QUESTION' | translate }}</a
-            >
+            <a [routerLink]="['/auth/recovery-password']">{{
+              "LOGIN.FORGOT_PASSWORD_QUESTION" | translate
+            }}</a>
           </div>
         </div>
 
@@ -261,11 +256,12 @@
             >
               @if (loadingFlag) {
                 <!-- ANIMAZIONE DI CARICAMENTO QUANDO SI EFFETTUA LA LOGIN  -->
-                <div
-                  class="row justify-content-center"
-                >
+                <div class="row justify-content-center">
                   <div class="col-6 d-flex justify-content-center">
-                    <mat-spinner class="text-center" diameter="25"></mat-spinner>
+                    <mat-spinner
+                      class="text-center"
+                      diameter="25"
+                    ></mat-spinner>
                   </div>
                 </div>
               } @else {
@@ -279,4 +275,3 @@
     </app-responsive-card>
   </div>
 </div>
-

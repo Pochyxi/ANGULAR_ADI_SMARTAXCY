@@ -1,21 +1,18 @@
-import {Component, Input, OnDestroy, OnInit} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
-import {AxcySetup} from "../../models/AxcySetup";
-import {AxcyService} from "../../services/axcy.service";
-import {NgIf, NgStyle} from "@angular/common";
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
+import { AxcySetup } from '../../models/AxcySetup';
+import { AxcyService } from '../../services/axcy.service';
+import { NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-axcy',
   standalone: true,
-  imports: [
-    NgStyle,
-    NgIf
-  ],
+  imports: [NgStyle, NgIf],
   templateUrl: './axcy.component.html',
-  styleUrl: './axcy.component.scss'
+  styleUrl: './axcy.component.scss',
 })
-export class AxcyComponent implements OnInit, OnDestroy{
-// SUBJECT PER LA GESTIONE DELLA UNSUBSCRIBE
+export class AxcyComponent implements OnInit, OnDestroy {
+  // SUBJECT PER LA GESTIONE DELLA UNSUBSCRIBE
   private onDestroy$ = new Subject<void>();
 
   axcyEmotion = '';

@@ -1,13 +1,19 @@
-import {AfterViewInit, Component, ElementRef, OnDestroy, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnDestroy,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-animate-particles',
   standalone: true,
   imports: [],
   templateUrl: './animate-particles.component.html',
-  styleUrl: './animate-particles.component.scss'
+  styleUrl: './animate-particles.component.scss',
 })
-export class AnimateParticlesComponent implements AfterViewInit, OnDestroy{
+export class AnimateParticlesComponent implements AfterViewInit, OnDestroy {
   @ViewChild('particleCanvas') particleCanvas:
     | ElementRef<HTMLCanvasElement>
     | undefined;

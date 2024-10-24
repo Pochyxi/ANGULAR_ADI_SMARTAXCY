@@ -1,0 +1,14 @@
+@import "../../../smart-calendar";
+
+.border-blue {
+  border-left: 3px solid $primary;
+}
+
+.neumorphic-card {
+  border-radius: 12px;
+  box-shadow:
+    5px 5px 15px #bebebe,
+    -5px -5px 15px #ffffff;
+  padding: 20px;
+  transition: all 0.3s ease-in-out;
+}

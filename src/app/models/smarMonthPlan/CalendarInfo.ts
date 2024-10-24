@@ -1,4 +1,3 @@
-
 export class CalendarInfo {
   calendarDay: string;
   reservedWorkspaces: number;

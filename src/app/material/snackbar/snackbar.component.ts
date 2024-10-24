@@ -1,20 +1,23 @@
-import {Component, Inject} from '@angular/core';
-import {Subject, takeUntil} from "rxjs";
-import {AxcySetup} from "../../models/AxcySetup";
-import {MAT_SNACK_BAR_DATA, MatSnackBarRef} from "@angular/material/snack-bar";
-import {AxcyService} from "../../services/axcy.service";
-import {MaterialModule} from "../material.module";
-import {AxcyComponent} from "../../components/axcy/axcy.component";
+import { Component, Inject } from '@angular/core';
+import { Subject, takeUntil } from 'rxjs';
+import { AxcySetup } from '../../models/AxcySetup';
+import {
+  MAT_SNACK_BAR_DATA,
+  MatSnackBarRef,
+} from '@angular/material/snack-bar';
+import { AxcyService } from '../../services/axcy.service';
+import { MaterialModule } from '../material.module';
+import { AxcyComponent } from '../../components/axcy/axcy.component';
 
 @Component({
   selector: 'app-snackbar',
   standalone: true,
   imports: [MaterialModule, AxcyComponent],
   templateUrl: './snackbar.component.html',
-  styleUrl: './snackbar.component.scss'
+  styleUrl: './snackbar.component.scss',
 })
 export class SnackbarComponent {
-// SUBJECT PER LA GESTIONE DELLA UNSUBSCRIBE
+  // SUBJECT PER LA GESTIONE DELLA UNSUBSCRIBE
   private onDestroy$ = new Subject<void>();
 
   // VARIABILE PER LA VISUALIZZAZIONE CONDIZIONALE DEL COLORE TESTO
